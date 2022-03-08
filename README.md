@@ -1,2 +1,2 @@
 # SQLiTest
-Quelques requêtes SQLite3 de test
+Test des requêtes de base SQLite3 
