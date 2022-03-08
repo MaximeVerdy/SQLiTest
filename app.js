@@ -1,4 +1,4 @@
-// pourrait être utilisé Knex.js qui est un SQL query builder pour PostgreSQL, MySQL, SQLite3, Better-SQLite3, and Amazon Redshift et d'autres
+// pourrait être utilisé Knex.js ; un SQL query builder pour PostgreSQL, MySQL, SQLite3, Better-SQLite3, Amazon Redshift et d'autres
 // tuto Knex https://youtu.be/cr3pX6fSUpc?t=1011 
 
 const sqlite = require('sqlite3')
@@ -11,7 +11,7 @@ let db = new sqlite.Database(bdname, err => {
      console.log('db started');
 })
 
-db.serialize(() => {  // serialize évite la parallèlisme par défaut de sqlite. enlevable, toute requête seront exécutées sans attendre la fin de chacune
+db.serialize(() => {  // serialize évite le parallèlisme par défaut de sqlite. il est enlevable ; toute requête seront alors exécutées sans attendre la fin de la précédente
 
      // db.run(`CREATE TABLE test(name VARCHAR(255))`)
 
