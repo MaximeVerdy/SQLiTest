@@ -11,7 +11,7 @@ let db = new sqlite.Database(bdname, err => {
      console.log('db started');
 })
 
-db.serialize(() => {  // serialize évite le parallèlisme par défaut de sqlite. il est enlevable ; toute requête seront alors exécutées sans attendre la fin de la précédente
+db.serialize(() => {  // serialize évite le parallèlisme par défaut de sqlite. Il est enlevable ; toutes les requêtes seront alors exécutées sans attendre la fin de la précédente
 
      // db.run(`CREATE TABLE test(name VARCHAR(255))`)
 
